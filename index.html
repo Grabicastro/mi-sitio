@@ -8,6 +8,43 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .hero {
+      height: 100vh;
+      background: linear-gradient(to bottom right, #1a1a1a, #2c003e);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    body::before {
+      content: "";
+      display: block;
+      height: 56px; /* Altura del navbar para compensar el fixed-top */
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const bars = document.querySelectorAll(".progress-bar");
+      bars.forEach(bar => {
+        const value = bar.getAttribute("data-percent");
+        setTimeout(() => {
+          bar.style.width = value;
+        }, 500);
+      });
+    });
+  </script>
 </head>
 
 <body>
@@ -38,8 +75,143 @@
       <p id="typed-text" class="lead"></p>
     </div>
   </header>
+  
 
-  <!-- Aquí seguirían las secciones: About, Projects, etc. -->
+  <!-- Aquí seguirían las secciones: About, Projects, etc. 
+  
+
+  <div class="container my-5" >
+    <div class="card shadow-lg p-4 animate-card">
+      <div class="row">
+        Columna izquierda 
+        <div class="col-md-4 text-center">
+          <img src="img/perfil.jpg" width="100px" alt="Profile" class="img-fluid rounded mb-3">
+          <p><strong>Name:</strong> Grabiela Castro Armijos</p>
+          <p><strong>Profile:</strong> Ingeniera de Sistemas</p>
+          <p><strong>Email:</strong> castrograbiela_12@ieee.org</p>
+  
+          <h5 class="mt-4">Skills</h5>
+          <div class="mb-2">
+            <small>HTML</small>
+            <div class="progress">
+              <div class="progress-bar bg-primary" data-percent="100%" style="width: 0%"></div>
+            </div>
+          </div>
+          <div class="mb-2">
+            <small>CSS</small>
+            <div class="progress">
+              <div class="progress-bar bg-primary" data-percent="90%" style="width: 0%"></div>
+            </div>
+          </div>
+          <div class="mb-2">
+            <small>JavaScript</small>
+            <div class="progress">
+              <div class="progress-bar bg-primary" data-percent="75%" style="width: 0%"></div>
+            </div>
+          </div>
+          <div class="mb-2">
+            <small>Photoshop</small>
+            <div class="progress">
+              <div class="progress-bar bg-primary" data-percent="55%" style="width: 0%"></div>
+            </div>
+          </div>
+        </div>
+  
+        Columna derecha 
+        <div class="col-md-8">
+          <h3 class="mb-3 border-bottom pb-2">About me</h3>
+          <p class="text-justify">Soy una ingeniera de sistemas apasionada por la tecnología y el desarrollo web. Me encanta aprender nuevas habilidades y enfrentar desafíos. Siempre estoy buscando oportunidades para crecer y mejorar en mi carrera.</p>
+          <p class="text-justify">Me gusta trabajar en equipo y colaborar con otros para crear soluciones innovadoras. Estoy interesada en el desarrollo de aplicaciones web y móviles, así como en la inteligencia artificial y el aprendizaje automático.</p>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  
+  <div class="container my-5" id="about">
+    <div class="card shadow-lg p-4 animate-card">
+      <div class="row">
+        <!-- Columna izquierda (mitad) -->
+        <div class="col-md-6">
+          <div class="d-flex">
+            <div class="me-3">
+              <img src="img/perfil.jpg" width="300px" height= "50px"alt="Profile" class="img-fluid rounded mb-3">
+            </div>
+            <div>
+              <p><strong>Name:</strong> Grabiela Castro Armijos</p>
+              <p><strong>Profile:</strong> Ingeniera de Sistemas</p>
+              <p><strong>Email:</strong> castrograbiela_12@ieee.org</p>
+            </div>
+          </div>
+          
+          <!-- Skills -->
+          <h5 class="mt-4">Skills</h5>
+          <div class="mb-2">
+            <small>HTML</small>
+            <div class="progress">
+              <div class="progress-bar bg-primary" data-percent="100%" style="width: 0%"></div>
+            </div>
+          </div>
+          <div class="mb-2">
+            <small>CSS</small>
+            <div class="progress">
+              <div class="progress-bar bg-primary" data-percent="90%" style="width: 0%"></div>
+            </div>
+          </div>
+          <div class="mb-2">
+            <small>JavaScript</small>
+            <div class="progress">
+              <div class="progress-bar bg-primary" data-percent="75%" style="width: 0%"></div>
+            </div>
+          </div>
+          <div class="mb-2">
+            <small>Photoshop</small>
+            <div class="progress">
+              <div class="progress-bar bg-primary" data-percent="55%" style="width: 0%"></div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Columna derecha (mitad) -->
+        <div class="col-md-6">
+          <h3 class="mb-3 border-bottom pb-2">About me</h3>
+          <p class="text-justify">Soy una ingeniera de sistemas apasionada por la tecnología y el desarrollo web. Me encanta aprender nuevas habilidades y enfrentar desafíos. Siempre estoy buscando oportunidades para crecer y mejorar en mi carrera.</p>
+          <p class="text-justify">Me gusta trabajar en equipo y colaborar con otros para crear soluciones innovadoras. Estoy interesada en el desarrollo de aplicaciones web y móviles, así como en la inteligencia artificial y el aprendizaje automático.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="resumen" class="resume-section">
+    <div class="container">
+      <h2 class="section-title">Resumen</h2>
+      <div class="resume-grid">
+        <div class="resume-card">
+          <img src="assets/images/icono1.png" alt="Experiencia" />
+          <h3>+x años de experiencia</h3>
+          <p>En proyectos tecnológicos, liderazgo y organización de eventos.</p>
+        </div>
+        <div class="resume-card">
+          <img src="assets/images/icono2.png" alt="Liderazgo" />
+          <h3>Perfil proactivo</h3>
+          <p>Buena comunicación, trabajo en equipo y orientación a resultados.</p>
+        </div>
+        <div class="resume-card">
+          <img src="assets/images/icono3.png" alt="Creatividad" />
+          <h3>Creatividad & Diseño</h3>
+          <p>Dominio de herramientas como Canva, WordPress y diseño web.</p>
+        </div>
+        <div class="resume-card">
+          <img src="assets/images/icono4.png" alt="Organización" />
+          <h3>Organización</h3>
+          <p>Planeamiento, gestión de proyectos y priorización de tareas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+  
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
