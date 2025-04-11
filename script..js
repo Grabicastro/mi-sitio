@@ -8,6 +8,7 @@ function typeEffect() {
     index++;
     setTimeout(typeEffect, speed);
   }
+  
 }
 
 window.onload = typeEffect;
