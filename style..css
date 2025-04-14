@@ -74,53 +74,99 @@ body::before {
 }
 
 
-.resume-section {
-  background-color: #fdf1f6;
-  padding: 60px 20px;
-  text-align: center;
+/*efecto*/
+/* Efecto de sombra suave al hacer hover sobre las tarjetas */
+
+
+.text-lila {
+  color: #ba55d3;
 }
 
-.section-title {
+/* Estilo para las tarjetas de servicios */
+.servicio-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Efecto hover */
+.servicio-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(186, 85, 211, 0.3);
+}
+
+.servicio-card h5 {
+  transition: color 0.3s ease;
+}
+
+.servicio-card:hover h5 {
+  color: #ba55d3;
+}
+
+/* Línea lila inferior en hover */
+.servicio-card::after {
+  content: '';
+  position: absolute;
+  bottom: 15px;
+  left: 25%;
+  width: 50%;
+  height: 3px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  border-radius: 3px;
+}
+
+.servicio-card:hover::after {
+  background-color: #ba55d3;
+}
+
+
+
+.stats-seccion {
+  background-color: #4b0082; /* índigo oscuro */
+  color: white;
+}
+
+.stats-seccion h2 {
   font-size: 2.5rem;
-  color: #e91e63;
-  margin-bottom: 40px;
-  font-weight: bold;
 }
 
-.resume-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 30px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.resume-card {
-  background-color: white;
-  padding: 30px 20px;
-  border-radius: 16px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
-  transition: transform 0.3s ease;
-}
-
-.resume-card:hover {
-  transform: translateY(-5px);
-}
-
-.resume-card img {
-  width: 60px;
-  margin-bottom: 15px;
-}
-
-.resume-card h3 {
-  color: #d81b60;
+.stats-seccion p {
   font-size: 1.2rem;
-  margin-bottom: 10px;
 }
 
-.resume-card p {
-  color: #333;
-  font-size: 0.95rem;
-  line-height: 1.5;
+
+/*boton*/
+/* Estilo del botón "Ver más" */
+
+.scroll-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  background-color: #4b0082; /* mismo color índigo de sección azul */
+  color: white;
+  border-radius: 50%;
+  z-index: 999;
+  transition: all 0.3s;
+  opacity: 0;
+  visibility: hidden;
 }
+
+.scroll-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-top i {
+  font-size: 1.5rem;
+}
+.scroll-top:hover {
+  background-color: #ba55d3; /* color lila al hacer hover */
+  transform: scale(1.1);
+}
+
+
+/* footer */
 
