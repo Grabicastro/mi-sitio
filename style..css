@@ -170,3 +170,20 @@ body::before {
 
 /* footer */
 
+.btn-social {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  padding: 0;
+  font-size: 18px;
+  line-height: 40px;
+  background-color: #555; /* Fondo inicial */
+  color: #fff; /* Color inicial del ícono */
+  transition: all 0.3s ease; /* Transición suave */
+}
+
+.btn-social:hover {
+  background-color: #fff; /* Fondo blanco al pasar el mouse */
+  color: #555; /* Ícono cambia a gris oscuro */
+  border-color: #fff; /* Borde blanco */
+}
