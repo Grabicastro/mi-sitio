@@ -1,4 +1,3 @@
-// script.js
 document.addEventListener("DOMContentLoaded", () => {
   const text = "Bienvenido a mi espacio donde la creatividad, tecnología y la espiritualidad se fusionan para inspirar y conectar.";
   const typedText = document.getElementById("typed-text");
@@ -17,7 +16,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
   typeEffect();
 });
-
-
-
-
