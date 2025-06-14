@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Grabi Castro| Portafolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap CSS (solo una vez) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <!-- Tu CSS personalizado -->
   <link rel="stylesheet" href="style.css">
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- AOS CSS (solo una vez) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Animate.css (si lo usas) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <style>
     html, body {
       height: 100%;
@@ -180,14 +186,6 @@
       }
     });
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>  
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.compat.min.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css.map"/>
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
@@ -221,34 +219,33 @@
 
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-         <!-- Redes sociales en lugar del texto "Grabi" -->
-      <div class="d-flex">
-        <a href="https://www.instagram.com/grabicastro.8/" class="btn btn-outline-light btn-social mx-1">
-          <i class="bi bi-instagram"></i>
-        </a>
-        <a href="https://pe.linkedin.com/in/grabielacastroarmijos" class="btn btn-outline-light btn-social mx-1">
-          <i class="bi bi-linkedin"></i>
-        </a>
-        <a href="https://github.com/Grabicastro" class="btn btn-outline-light btn-social mx-1">
-          <i class="bi bi-github"></i>
-        </a>
-      </div>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">Sobre mi</a></li>
-          <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
-          <li class="nav-item"><a class="nav-link" href="#curiosidades">curiosiosidades</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contacto">Contáctame</a></li>
-        </ul>
-      </div>
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <div class="d-flex">
+      <a href="https://www.instagram.com/grabicastro.8/" class="btn btn-outline-light btn-social mx-1">
+        <i class="bi bi-instagram"></i>
+      </a>
+      <a href="https://pe.linkedin.com/in/grabielacastroarmijos" class="btn btn-outline-light btn-social mx-1">
+        <i class="bi bi-linkedin"></i>
+      </a>
+      <a href="https://github.com/Grabicastro" class="btn btn-outline-light btn-social mx-1">
+        <i class="bi bi-github"></i>
+      </a>
     </div>
-  </nav>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">Sobre mi</a></li>
+        <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+        <li class="nav-item"><a class="nav-link" href="#curiosidades">Curiosidades</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacto">Contáctame</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
   <!-- Hero Section -->
   <header class="hero d-flex align-items-center justify-content-center text-center" id="hero">
@@ -551,7 +548,7 @@
         <div class="border-bottom border-primary mx-auto" style="width: 60px;"></div>
         <p class="text-muted mt-3" style="color: #555;">Curiosidades sobre mí</p>
       </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
     <div class="my-5"></div> <!-- Espacio visual agregado -->
       <!-- Astrología -->
       <div class="row align-items-center mb-5">
@@ -613,7 +610,7 @@
           <h3 class="fw-bold ms-5" style="color: #333;">🧳💯 Amo Viajar</h3>
           <p class="text-muted ms-5" style="color: #555;">
             Viajar es una de las actividades que más disfruto relizar, probar nuevas comidas, conocer costumbres y diviersas culturas
-            es algo que me encanta 
+            es algo que me encanta.
             Cada viaje me inspira y me ayuda a ver el mundo desde diferentes perspectivas.
         
           </p>
@@ -733,10 +730,19 @@
         once: true
       });
     </script>
-  
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js"></script>
 </body>
+<!-- Bootstrap Bundle JS (solo una vez, última versión) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- AOS JS (solo una vez) -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+<!-- Tu JS personalizado -->
+<script src="script.js"></script>
 </html>
 
 
