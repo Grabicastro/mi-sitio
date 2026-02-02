@@ -211,13 +211,32 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    document.addEventListener('aos:in:about', function() {
-      const bars = document.querySelectorAll('#about .progress-bar');
-      bars.forEach(bar => {
-        const value = bar.getAttribute('data-percent');
-        bar.style.width = value;
+    const skillsSection = document.getElementById('about');
+    const bars = document.querySelectorAll('#about .progress-bar');
+
+    const animateBars = (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Cuando la sección es visible, llenamos las barras
+          bars.forEach(bar => {
+            const value = bar.getAttribute('data-percent');
+            bar.style.transition = "width 1.5s ease-in-out"; 
+            bar.style.width = value;
+          });
+          // Dejamos de observar para que no se repita innecesariamente
+          observer.unobserve(entry.target);
+        }
       });
-    });
+    };
+
+    const options = {
+      threshold: 0.3 // Se activa cuando el 30% de la sección es visible
+    };
+
+    const observer = new IntersectionObserver(animateBars, options);
+    if (skillsSection) {
+      observer.observe(skillsSection);
+    }
   });
 </script>
 
