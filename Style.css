@@ -79,7 +79,11 @@ h1, h2, h3, h4, h5, h6 {
   color: #ffffff;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
 }
-
+.intro-text1 {
+  color: #ffffffaa;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+  font-size: 1.1rem;
+}
 .gradient-circle {
   position: absolute;
   width: 300px;
